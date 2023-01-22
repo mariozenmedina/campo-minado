@@ -1,0 +1,14 @@
+#app {
+  display: flex;
+  width: calc(20px * 8);
+  flex-wrap: wrap;
+}
+#app .field {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: outset 1px black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

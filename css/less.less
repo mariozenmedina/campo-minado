@@ -1,0 +1,17 @@
+@fieldLength: 20px;
+
+#app {
+    display: flex;
+    width: calc(@fieldLength * 8);
+    flex-wrap: wrap;
+
+    .field {
+        display: inline-block;
+        width: @fieldLength;
+        height: @fieldLength;
+        border: outset 1px black;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
