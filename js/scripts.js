@@ -29,38 +29,20 @@ function runBoard() {
             map[num] = 'b';
         }
 
-        for (var i = 0; i < map.length; i++) {
-            if (map[i] === 'b') {
-                setNumbers(i);
+        for (var j = 0; j < map.length; j++) {
+            if (map[j] === 'b') {
+                setNumbers(j);
             }
         }
 
         function setNumbers(i) {
             let columns = boardSize[1];
 
-            if (map[i - columns - 1] != undefined && map[i - columns - 1] != 'b') {
-                map[i - columns - 1]++;
-            }
-            if (map[i - columns] != undefined && map[i - columns] != 'b') {
-                map[i - columns]++;
-            }
-            if (map[i - columns + 1] != undefined && map[i - columns + 1] != 'b') {
-                map[i - columns + 1]++;
-            }
-            if (map[i - 1] != undefined && map[i - 1] != 'b') {
-                map[i - 1]++;
-            }
-            if (map[i + 1] != undefined && map[i + 1] != 'b') {
-                map[i + 1]++;
-            }
-            if (map[i + columns - 1] != undefined && map[i + columns - 1] != 'b') {
-                map[i + columns - 1]++;
-            }
-            if (map[i + columns] != undefined && map[i + columns] != 'b') {
-                map[i + columns]++;
-            }
-            if (map[i + columns + 1] != undefined && map[i + columns + 1] != 'b') {
-                map[i + columns + 1]++;
+            let adjacentes = [i-columns-1, i-columns, i-columns+1, i-1, i+1, i+columns-1, i+columns, i+columns+1];
+            for(var j=0; j<adjacentes.length; j++){
+                if (map[adjacentes[j]] != undefined && map[adjacentes[j]] != 'b') {
+                    map[adjacentes[j]]++;
+                }
             }
 
         }
@@ -78,7 +60,7 @@ function runBoard() {
                     break;
 
                 default:
-                    divs[i].classList.add('num', 'num' + i);
+                    divs[i].classList.add('num', 'num' + map[i]);
                     break;
             }
         }
