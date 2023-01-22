@@ -55,7 +55,7 @@ body {
 }
 #app .field.num.num4::after {
   content: '4';
-  color: blue;
+  color: darkblue;
 }
 #app .field.num.num5::after {
   content: '5';
