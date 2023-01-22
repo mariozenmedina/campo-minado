@@ -1,14 +1,75 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
 #app {
   display: flex;
-  width: calc(20px * 8);
+  width: calc(5vw * 8);
   flex-wrap: wrap;
+  border: outset 5px #999;
 }
 #app .field {
+  position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: outset 1px black;
+  width: 5vw;
+  height: 5vw;
+  border: outset 1px #BBB;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #BBB;
+}
+#app .field.bomba {
+  background-image: url('../img/bomba.jpg');
+  background-size: cover;
+}
+#app .field.flag {
+  background-image: url('../img/flag.jpg');
+  background-size: cover;
+}
+#app .field.num {
+  background-color: #EEE;
+}
+#app .field.num::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 4vw;
+  text-align: center;
+}
+#app .field.num.num1::after {
+  content: '1';
+  color: blue;
+}
+#app .field.num.num2::after {
+  content: '2';
+  color: green;
+}
+#app .field.num.num3::after {
+  content: '3';
+  color: red;
+}
+#app .field.num.num4::after {
+  content: '4';
+  color: blue;
+}
+#app .field.num.num5::after {
+  content: '5';
+  color: maroon;
+}
+#app .field.num.num6::after {
+  content: '6';
+  color: #034f4f;
+}
+#app .field.num.num7::after {
+  content: '7';
+  color: purple;
+}
+#app .field.num.num8::after {
+  content: '8';
+  color: #333;
 }
